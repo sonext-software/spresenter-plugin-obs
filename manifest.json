@@ -1,0 +1,14 @@
+{
+  "id": "com.spresenter.obs",
+  "name": "OBS Studio",
+  "version": "0.3.0",
+  "description": "Controle o OBS Studio (obs-websocket v5) com nós de automação: cenas, transições, gravação, transmissão, visibilidade de fontes, mudo e requisições brutas.",
+  "author": "Chrystian Farias",
+  "minAppVersion": "0.3.0",
+  "sdk": "0.2.11",
+  "main": "dist/code.js",
+  "ui": "ui/index.html",
+  "permissions": ["net:connect"],
+  "panels": [{ "id": "obs", "title": "OBS Studio", "icon": "video" }],
+  "background": true
+}
