@@ -1,5 +1,5 @@
 // Packages the plugin for distribution: produces release/<id>-<version>.zip
-// with manifest.json at the root, the built dist/ and the static ui/. Run
+// with manifest.json at the root and the built dist/ (code.js + ui/). Run
 // `npm run package` (it builds first, then zips). Cross-platform via adm-zip.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,9 +29,7 @@ if (!fs.existsSync(distDir)) {
 
 const zip = new AdmZip();
 zip.addLocalFile(manifestPath); // manifest.json at the archive root
-zip.addLocalFolder(distDir, 'dist'); // built code.js
-const uiDir = path.join(root, 'ui');
-if (fs.existsSync(uiDir)) zip.addLocalFolder(uiDir, 'ui'); // static panel
+zip.addLocalFolder(distDir, 'dist'); // built code.js + ui/
 for (const extra of ['README.md', 'LICENSE']) {
   const p = path.join(root, extra);
   if (fs.existsSync(p)) zip.addLocalFile(p);
