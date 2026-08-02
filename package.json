@@ -1,9 +1,9 @@
-{
+﻿{
   "name": "spresenter-plugin-obs",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Plugin OBS Studio para o Spresenter — nós de automação via obs-websocket v5.",
+  "description": "Plugin OBS Studio para o Spresenter â€” nÃ³s de automaÃ§Ã£o via obs-websocket v5.",
   "scripts": {
     "build:code": "vite build --config vite.code.config.ts",
     "build:ui": "vite build --config vite.ui.config.ts",
